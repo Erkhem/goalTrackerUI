@@ -18,8 +18,8 @@ ReactDOM.render(
       <Router >
           <div>
               <Link to="/newGoal">Add goal :)</Link>
-              <Route exact path="/" component={Dashboard}/>
-              <Route path="/newGoal" component={NewGoal}/>
+              <Route exact path="/index" component={Dashboard}/>
+              <Route exact path="/newGoal" component={NewGoal}/>
           </div>
       </Router>
   </Provider>

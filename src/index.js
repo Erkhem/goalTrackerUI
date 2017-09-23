@@ -7,8 +7,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import Dashboard from './components/dashboard';
-import NewGoal from './components/newGoal';
+import App from './app';
+
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
@@ -16,11 +16,7 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
       <Router >
-          <div>
-              <Link to="/newGoal">Add goal :)</Link>
-              <Route exact path="/index" component={Dashboard}/>
-              <Route exact path="/newGoal" component={NewGoal}/>
-          </div>
+          <App />
       </Router>
   </Provider>
   , document.querySelector('.container'));
